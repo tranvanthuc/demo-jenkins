@@ -13,7 +13,7 @@ def build() {
     try {
         echo 'Building...'
         // sh 'CI=false yarn build'
-        withCredentials([usernamePassword(credentialsId: 'thuctv_github', usernameVariable: USER, passwordVariable: PWD)]) {
+        withCredentials([usernamePassword(credentialsId: 'thuctv_github', usernameVariable: 'USER', passwordVariable: 'PWD')]) {
             echo "${USER} - ${PWD}"
         }
     } catch (e) {
