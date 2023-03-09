@@ -14,7 +14,7 @@ def build() {
         echo 'Building...'
         // sh 'CI=false yarn build'
         withCredentials([usernamePassword(credentialsId: 'thuctv_github', usernameVariable: 'USER', passwordVariable: 'PWD')]) {
-            echo "${USER} - ${PWD}"
+            echo "${USER} - ${PWD} "
         }
     } catch (e) {
         echo 'Build failed'
